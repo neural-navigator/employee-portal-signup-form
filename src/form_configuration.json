@@ -1,0 +1,175 @@
+{ "basic_info": {
+    "Heading": "Basic Information",
+    "Fields": [
+        {
+            "id": 1,
+            "name": "firstname",
+            "type": "text",
+            "required": true,
+            "placeholder": "Fist Name",
+            "label": "First Name",
+            "pattern": "^[A-Za-z]{2-25}$",
+            "error_message": "It should contain only letters and can be from 2 to 25 letters"
+        },
+        {
+            "id": 2,
+            "name": "lastname",
+            "type": "text",
+            "required": true,
+            "placeholder": "Last Name",
+            "label": "Last Name",
+            "pattern": "^[A-Za-z]{2-25}$",
+            "error_message": "It should contain only letters and can be from 2 to 20 letters"
+        },
+        {
+            "id": 3,
+            "name": "email",
+            "type": "email",
+            "required": true,
+            "placeholder": "Email",
+            "label": "Email",
+            "error_message": "Should be a valid Email"
+        },
+        {
+            "id": 4,
+            "name": "phone",
+            "type": "numeric",
+            "required": true,
+            "placeholder": "Phone Number",
+            "label": "Phone Number",
+            "pattern": "^/d{10}$",
+            "error_message": "It should be a valid phone number"
+        }
+    ]
+    },
+    "personal_info": {
+        "Heading": "Personal Information",
+        "Fields": [
+            {
+                "id": 5,
+                "name": "Father Name",
+                "type": "text",
+                "required": true,
+                "placeholder": "Father's Name",
+                "label": "Father's Name",
+                "pattern": "^[A-Za-z]{2-25}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 6,
+                "name": "Mother Name",
+                "type": "text",
+                "required": true,
+                "placeholder": "Mother's Name",
+                "label": "Mother's Name",
+                "pattern": "^[A-Za-z]{2-25}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 7,
+                "name": "Country",
+                "type": "text",
+                "required": true,
+                "placeholder": "Country Name",
+                "label": "Country Name",
+                "pattern": "^[A-Za-z]{3,10}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 8,
+                "name": "State",
+                "type": "text",
+                "required": true,
+                "placeholder": "State",
+                "label": "State Name",
+                "pattern": "^[A-Za-z]{2,10}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 9,
+                "name": "City",
+                "type": "text",
+                "required": true,
+                "placeholder": "City Name",
+                "label": "City Name",
+                "pattern": "^[A-Za-z]{2,10}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 10,
+                "name": "House Number",
+                "type": "text",
+                "required": true,
+                "placeholder": "House Number",
+                "label": "House Number",
+                "pattern": "^[A-Za-z]{2,10}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 11,
+                "name": "Lane Number",
+                "type": "text",
+                "required": true,
+                "placeholder": "Lane Number",
+                "label": "Lane Number",
+                "pattern": "^[A-Za-z]{2,10}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 12,
+                "name": "Landmark",
+                "type": "text",
+                "required": true,
+                "placeholder": "Landmark",
+                "label": "Landmark",
+                "pattern": "^[A-Za-z]{2,10}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 13,
+                "name": "Pin Code",
+                "type": "number",
+                "required": true,
+                "placeholder": "Pin Code",
+                "label": "Pin Code",
+                "pattern": "^/d{6}$",
+                "error_message": "It should be a valid pin code"
+            }
+        ]
+    },
+    "job_details": {
+        "Heading": "Job Details",
+        "Fields": [
+            {
+                "id": 14,
+                "name": "Department",
+                "type": "text",
+                "required": true,
+                "placeholder": "Department",
+                "label": "Department",
+                "pattern": "^[A-Za-z]{2,10}$",
+                "error_message": "Should not contain any illegal character"
+            },
+            {
+                "id": 15,
+                "name": "Password",
+                "type": "password",
+                "required": true,
+                "placeholder": "Password",
+                "label": "Password",
+                "pattern": "^(?=.*[A-Za-z])(?=.*)(?=.*[@$!%*?&])[A-Za-z@$!%*?&]{3,16}$/;",
+                "error_message": "Should contain be combination of latter, number and special characters"
+            },
+            {
+                "id": 16,
+                "name": "Confirm Password",
+                "type": "password",
+                "required": true,
+                "placeholder": "Confirm Password",
+                "label": "Confirm Password",
+                "pattern": "Same Password",
+                "error_message": "Should be same as password"
+            }
+        ]
+    }
+}

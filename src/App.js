@@ -1,7 +1,10 @@
+import "./app.css";
+import FormComponent from "./components/FormComponent";
+
 function App() {
   return (
-    <div>
-      Hello
+    <div className="app">
+      <FormComponent />
     </div>
   );
 }
