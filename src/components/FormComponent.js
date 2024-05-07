@@ -24,6 +24,12 @@ function getPage(pageNum){
 
 function FormComponent() {
 
+    const maxVal = 3;
+    const [currentPage, setCurrentPage] = useState(0);
+
+    const val = getPage(currentPage);
+    let nameVals = data[val];
+
     let formVal = {}
     for(let i=0; i<3; i=i+1){
         let component = getPage(i);
@@ -35,43 +41,53 @@ function FormComponent() {
         formVal[component] = namedObject;
     }
 
-    console.log(formVal)
+    const [ userData, setUserData ] = useState({});
+
+    const handleNext = () => {
+        if(currentPage<maxVal-1){
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
+    const handlePrev = () => {
+        if(currentPage>0) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
+
+    const handleSubmit = (e) => { 
+        e.preventDefault();
+        console.log(JSON.stringify(userData, null, 2));
+      }
+
+    const onChange = (e) => {
+        console.log(e.target)
+        setUserData({ userData, [e.target.name]: e.target.value })
+    }
+
+    return (
+        <div className='app'>
+            <form onSubmit={handleSubmit}>
+                <InputHandler data={nameVals} onChange={onChange} section={val} />
+                <div>
+                <button onClick={handlePrev} class="btn1">Prev</button>
+                <button onClick={handleNext} class="btn1">Next</button>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    )
+
+
 }
 
 export default FormComponent;
 
 
-//     const maxVal = 3;
-//     const [currentPage, setCurrentPage] = useState(0);
-//     const val = getPage(currentPage);
-//     let nameVals = data[val];
-//     const namesList = nameVals.Fields.map((item) => item.name);
 
-//     const nameObject = {};
-//     for (const name of namesList) {
-//         nameObject[name] = "";
-//     }
-//     const [ userData, setUserData ] = useState({
-//         basicInfo: {},
-//         personalInfo: {},
-//         jobDetails: {}
-//     });
 
-//     const incrementCount = () => {
-//         if(currentPage<maxVal-1){
-//             setCurrentPage(currentPage + 1);
-//         }
-//     };
 
-//     const decrementCount = () => {
-//         if(currentPage>0) {
-//             setCurrentPage(currentPage - 1);
-//         }
-//     };
 
-//     const handleSubmit = (e) => { 
-//         e.preventDefault();
-//       }
     
 //     const onChange = (e) => {
 //         setUserData((prevState) => ({
